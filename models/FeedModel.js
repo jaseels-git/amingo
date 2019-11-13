@@ -1,6 +1,7 @@
-
+// Import mongoose
 const mongoose = require('mongoose');
 
+// Assign the Schema object
 const Schema = mongoose.Schema;
 
 const FeedSchema = new Schema({
@@ -13,22 +14,23 @@ const FeedSchema = new Schema({
         required: true
     },
     tags: {
-        type: Array,
+        type: Array
     },
     image: {
-        type: String,
+        type: String
     },
     likes: {
-        type: Number,
-        default : 0
+        type: Array,
+        default: []
     },
     shares: {
-        type: String,
-        default : 0
+        type: Array,
+        default: []
     },
     date: {
         type: Date,
         default: Date.now
     }
-})
-module.exports = FeedModel = mongoose.model('feeds', FeedSchema);
+});
+
+module.exports = FeedModel = mongoose.model('feeds', FeedSchema)

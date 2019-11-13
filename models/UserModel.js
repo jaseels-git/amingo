@@ -1,7 +1,7 @@
 // Import mongoose
 const mongoose = require('mongoose');
 
-// Assign the Schema object
+// Assign the Schema object - it is a user model
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
@@ -30,4 +30,5 @@ const UserSchema = new Schema({
     }
 })
 
-module.exports = User = mongoose.model('user', UserSchema);
+const UserModel = mongoose.model('user', UserSchema);
+module.exports = UserModel;
